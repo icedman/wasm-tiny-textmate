@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(cpp_library)
+project(c_library)
 
-set(CPP_LIBRARY_TYPE "STATIC" CACHE STRING "Library type to build")
-set_property(CACHE CPP_LIBRARY_TYPE PROPERTY STRINGS STATIC SHARED)
+set(C_LIBRARY_TYPE "STATIC" CACHE STRING "Library type to build")
+set_property(CACHE C_LIBRARY_TYPE PROPERTY STRINGS STATIC SHARED)
 
-add_library(cpp_lib ${CPP_LIBRARY_TYPE} lib.cpp
+add_library(c_lib ${C_LIBRARY_TYPE} lib.c
     ./libs/Onigmo/regcomp.c
     ./libs/Onigmo/regexec.c
     ./libs/Onigmo/regparse.c
@@ -72,7 +72,7 @@ add_library(cpp_lib ${CPP_LIBRARY_TYPE} lib.cpp
     ./libs/tiny-textmate/cJSON/cJSON.c
 )
 
-target_include_directories(cpp_lib 
+target_include_directories(c_lib 
     PRIVATE
     ./libs/Onigmo
     ./libs/Onigmo/enc
@@ -81,4 +81,4 @@ target_include_directories(cpp_lib
     ./libs/tiny-textmate/cJSON
 )
 
-# em_link_js_library(cpp_lib "lib.js")
+# em_link_js_library(c_lib "lib.js")

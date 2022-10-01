@@ -5,3 +5,4 @@ cmake_install.cmake
 syntax_highlight.js
 *.wasm
 *.gz
+**/*.a

@@ -117,49 +117,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/CMakeFiles/cpp_lib.dir/rule:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cpp_lib.dir/rule
-.PHONY : lib/CMakeFiles/cpp_lib.dir/rule
+lib/CMakeFiles/c_lib.dir/rule:
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/c_lib.dir/rule
+.PHONY : lib/CMakeFiles/c_lib.dir/rule
 
 # Convenience name for target.
-cpp_lib: lib/CMakeFiles/cpp_lib.dir/rule
-.PHONY : cpp_lib
+c_lib: lib/CMakeFiles/c_lib.dir/rule
+.PHONY : c_lib
 
 # fast build rule for target.
-cpp_lib/fast:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/build
-.PHONY : cpp_lib/fast
+c_lib/fast:
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/build
+.PHONY : c_lib/fast
 
-lib.o: lib.cpp.o
+lib.o: lib.c.o
 .PHONY : lib.o
 
 # target to build an object file
-lib.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.o
-.PHONY : lib.cpp.o
+lib.c.o:
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/lib.c.o
+.PHONY : lib.c.o
 
-lib.i: lib.cpp.i
+lib.i: lib.c.i
 .PHONY : lib.i
 
 # target to preprocess a source file
-lib.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.i
-.PHONY : lib.cpp.i
+lib.c.i:
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/lib.c.i
+.PHONY : lib.c.i
 
-lib.s: lib.cpp.s
+lib.s: lib.c.s
 .PHONY : lib.s
 
 # target to generate assembly for a file
-lib.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.s
-.PHONY : lib.cpp.s
+lib.c.s:
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/lib.c.s
+.PHONY : lib.c.s
 
 libs/Onigmo/enc/ascii.o: libs/Onigmo/enc/ascii.c.o
 .PHONY : libs/Onigmo/enc/ascii.o
 
 # target to build an object file
 libs/Onigmo/enc/ascii.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/ascii.c.o
 .PHONY : libs/Onigmo/enc/ascii.c.o
 
 libs/Onigmo/enc/ascii.i: libs/Onigmo/enc/ascii.c.i
@@ -167,7 +167,7 @@ libs/Onigmo/enc/ascii.i: libs/Onigmo/enc/ascii.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/ascii.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/ascii.c.i
 .PHONY : libs/Onigmo/enc/ascii.c.i
 
 libs/Onigmo/enc/ascii.s: libs/Onigmo/enc/ascii.c.s
@@ -175,7 +175,7 @@ libs/Onigmo/enc/ascii.s: libs/Onigmo/enc/ascii.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/ascii.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/ascii.c.s
 .PHONY : libs/Onigmo/enc/ascii.c.s
 
 libs/Onigmo/enc/unicode.o: libs/Onigmo/enc/unicode.c.o
@@ -183,7 +183,7 @@ libs/Onigmo/enc/unicode.o: libs/Onigmo/enc/unicode.c.o
 
 # target to build an object file
 libs/Onigmo/enc/unicode.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/unicode.c.o
 .PHONY : libs/Onigmo/enc/unicode.c.o
 
 libs/Onigmo/enc/unicode.i: libs/Onigmo/enc/unicode.c.i
@@ -191,7 +191,7 @@ libs/Onigmo/enc/unicode.i: libs/Onigmo/enc/unicode.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/unicode.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/unicode.c.i
 .PHONY : libs/Onigmo/enc/unicode.c.i
 
 libs/Onigmo/enc/unicode.s: libs/Onigmo/enc/unicode.c.s
@@ -199,7 +199,7 @@ libs/Onigmo/enc/unicode.s: libs/Onigmo/enc/unicode.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/unicode.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/unicode.c.s
 .PHONY : libs/Onigmo/enc/unicode.c.s
 
 libs/Onigmo/enc/utf_8.o: libs/Onigmo/enc/utf_8.c.o
@@ -207,7 +207,7 @@ libs/Onigmo/enc/utf_8.o: libs/Onigmo/enc/utf_8.c.o
 
 # target to build an object file
 libs/Onigmo/enc/utf_8.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/utf_8.c.o
 .PHONY : libs/Onigmo/enc/utf_8.c.o
 
 libs/Onigmo/enc/utf_8.i: libs/Onigmo/enc/utf_8.c.i
@@ -215,7 +215,7 @@ libs/Onigmo/enc/utf_8.i: libs/Onigmo/enc/utf_8.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/utf_8.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/utf_8.c.i
 .PHONY : libs/Onigmo/enc/utf_8.c.i
 
 libs/Onigmo/enc/utf_8.s: libs/Onigmo/enc/utf_8.c.s
@@ -223,7 +223,7 @@ libs/Onigmo/enc/utf_8.s: libs/Onigmo/enc/utf_8.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/utf_8.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/enc/utf_8.c.s
 .PHONY : libs/Onigmo/enc/utf_8.c.s
 
 libs/Onigmo/regcomp.o: libs/Onigmo/regcomp.c.o
@@ -231,7 +231,7 @@ libs/Onigmo/regcomp.o: libs/Onigmo/regcomp.c.o
 
 # target to build an object file
 libs/Onigmo/regcomp.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regcomp.c.o
 .PHONY : libs/Onigmo/regcomp.c.o
 
 libs/Onigmo/regcomp.i: libs/Onigmo/regcomp.c.i
@@ -239,7 +239,7 @@ libs/Onigmo/regcomp.i: libs/Onigmo/regcomp.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regcomp.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regcomp.c.i
 .PHONY : libs/Onigmo/regcomp.c.i
 
 libs/Onigmo/regcomp.s: libs/Onigmo/regcomp.c.s
@@ -247,7 +247,7 @@ libs/Onigmo/regcomp.s: libs/Onigmo/regcomp.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regcomp.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regcomp.c.s
 .PHONY : libs/Onigmo/regcomp.c.s
 
 libs/Onigmo/regenc.o: libs/Onigmo/regenc.c.o
@@ -255,7 +255,7 @@ libs/Onigmo/regenc.o: libs/Onigmo/regenc.c.o
 
 # target to build an object file
 libs/Onigmo/regenc.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regenc.c.o
 .PHONY : libs/Onigmo/regenc.c.o
 
 libs/Onigmo/regenc.i: libs/Onigmo/regenc.c.i
@@ -263,7 +263,7 @@ libs/Onigmo/regenc.i: libs/Onigmo/regenc.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regenc.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regenc.c.i
 .PHONY : libs/Onigmo/regenc.c.i
 
 libs/Onigmo/regenc.s: libs/Onigmo/regenc.c.s
@@ -271,7 +271,7 @@ libs/Onigmo/regenc.s: libs/Onigmo/regenc.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regenc.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regenc.c.s
 .PHONY : libs/Onigmo/regenc.c.s
 
 libs/Onigmo/regerror.o: libs/Onigmo/regerror.c.o
@@ -279,7 +279,7 @@ libs/Onigmo/regerror.o: libs/Onigmo/regerror.c.o
 
 # target to build an object file
 libs/Onigmo/regerror.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regerror.c.o
 .PHONY : libs/Onigmo/regerror.c.o
 
 libs/Onigmo/regerror.i: libs/Onigmo/regerror.c.i
@@ -287,7 +287,7 @@ libs/Onigmo/regerror.i: libs/Onigmo/regerror.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regerror.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regerror.c.i
 .PHONY : libs/Onigmo/regerror.c.i
 
 libs/Onigmo/regerror.s: libs/Onigmo/regerror.c.s
@@ -295,7 +295,7 @@ libs/Onigmo/regerror.s: libs/Onigmo/regerror.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regerror.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regerror.c.s
 .PHONY : libs/Onigmo/regerror.c.s
 
 libs/Onigmo/regexec.o: libs/Onigmo/regexec.c.o
@@ -303,7 +303,7 @@ libs/Onigmo/regexec.o: libs/Onigmo/regexec.c.o
 
 # target to build an object file
 libs/Onigmo/regexec.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regexec.c.o
 .PHONY : libs/Onigmo/regexec.c.o
 
 libs/Onigmo/regexec.i: libs/Onigmo/regexec.c.i
@@ -311,7 +311,7 @@ libs/Onigmo/regexec.i: libs/Onigmo/regexec.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regexec.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regexec.c.i
 .PHONY : libs/Onigmo/regexec.c.i
 
 libs/Onigmo/regexec.s: libs/Onigmo/regexec.c.s
@@ -319,7 +319,7 @@ libs/Onigmo/regexec.s: libs/Onigmo/regexec.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regexec.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regexec.c.s
 .PHONY : libs/Onigmo/regexec.c.s
 
 libs/Onigmo/regext.o: libs/Onigmo/regext.c.o
@@ -327,7 +327,7 @@ libs/Onigmo/regext.o: libs/Onigmo/regext.c.o
 
 # target to build an object file
 libs/Onigmo/regext.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regext.c.o
 .PHONY : libs/Onigmo/regext.c.o
 
 libs/Onigmo/regext.i: libs/Onigmo/regext.c.i
@@ -335,7 +335,7 @@ libs/Onigmo/regext.i: libs/Onigmo/regext.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regext.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regext.c.i
 .PHONY : libs/Onigmo/regext.c.i
 
 libs/Onigmo/regext.s: libs/Onigmo/regext.c.s
@@ -343,7 +343,7 @@ libs/Onigmo/regext.s: libs/Onigmo/regext.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regext.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regext.c.s
 .PHONY : libs/Onigmo/regext.c.s
 
 libs/Onigmo/reggnu.o: libs/Onigmo/reggnu.c.o
@@ -351,7 +351,7 @@ libs/Onigmo/reggnu.o: libs/Onigmo/reggnu.c.o
 
 # target to build an object file
 libs/Onigmo/reggnu.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/reggnu.c.o
 .PHONY : libs/Onigmo/reggnu.c.o
 
 libs/Onigmo/reggnu.i: libs/Onigmo/reggnu.c.i
@@ -359,7 +359,7 @@ libs/Onigmo/reggnu.i: libs/Onigmo/reggnu.c.i
 
 # target to preprocess a source file
 libs/Onigmo/reggnu.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/reggnu.c.i
 .PHONY : libs/Onigmo/reggnu.c.i
 
 libs/Onigmo/reggnu.s: libs/Onigmo/reggnu.c.s
@@ -367,7 +367,7 @@ libs/Onigmo/reggnu.s: libs/Onigmo/reggnu.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/reggnu.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/reggnu.c.s
 .PHONY : libs/Onigmo/reggnu.c.s
 
 libs/Onigmo/regparse.o: libs/Onigmo/regparse.c.o
@@ -375,7 +375,7 @@ libs/Onigmo/regparse.o: libs/Onigmo/regparse.c.o
 
 # target to build an object file
 libs/Onigmo/regparse.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regparse.c.o
 .PHONY : libs/Onigmo/regparse.c.o
 
 libs/Onigmo/regparse.i: libs/Onigmo/regparse.c.i
@@ -383,7 +383,7 @@ libs/Onigmo/regparse.i: libs/Onigmo/regparse.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regparse.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regparse.c.i
 .PHONY : libs/Onigmo/regparse.c.i
 
 libs/Onigmo/regparse.s: libs/Onigmo/regparse.c.s
@@ -391,7 +391,7 @@ libs/Onigmo/regparse.s: libs/Onigmo/regparse.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regparse.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regparse.c.s
 .PHONY : libs/Onigmo/regparse.c.s
 
 libs/Onigmo/regposerr.o: libs/Onigmo/regposerr.c.o
@@ -399,7 +399,7 @@ libs/Onigmo/regposerr.o: libs/Onigmo/regposerr.c.o
 
 # target to build an object file
 libs/Onigmo/regposerr.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposerr.c.o
 .PHONY : libs/Onigmo/regposerr.c.o
 
 libs/Onigmo/regposerr.i: libs/Onigmo/regposerr.c.i
@@ -407,7 +407,7 @@ libs/Onigmo/regposerr.i: libs/Onigmo/regposerr.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regposerr.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposerr.c.i
 .PHONY : libs/Onigmo/regposerr.c.i
 
 libs/Onigmo/regposerr.s: libs/Onigmo/regposerr.c.s
@@ -415,7 +415,7 @@ libs/Onigmo/regposerr.s: libs/Onigmo/regposerr.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regposerr.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposerr.c.s
 .PHONY : libs/Onigmo/regposerr.c.s
 
 libs/Onigmo/regposix.o: libs/Onigmo/regposix.c.o
@@ -423,7 +423,7 @@ libs/Onigmo/regposix.o: libs/Onigmo/regposix.c.o
 
 # target to build an object file
 libs/Onigmo/regposix.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposix.c.o
 .PHONY : libs/Onigmo/regposix.c.o
 
 libs/Onigmo/regposix.i: libs/Onigmo/regposix.c.i
@@ -431,7 +431,7 @@ libs/Onigmo/regposix.i: libs/Onigmo/regposix.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regposix.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposix.c.i
 .PHONY : libs/Onigmo/regposix.c.i
 
 libs/Onigmo/regposix.s: libs/Onigmo/regposix.c.s
@@ -439,7 +439,7 @@ libs/Onigmo/regposix.s: libs/Onigmo/regposix.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regposix.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regposix.c.s
 .PHONY : libs/Onigmo/regposix.c.s
 
 libs/Onigmo/regsyntax.o: libs/Onigmo/regsyntax.c.o
@@ -447,7 +447,7 @@ libs/Onigmo/regsyntax.o: libs/Onigmo/regsyntax.c.o
 
 # target to build an object file
 libs/Onigmo/regsyntax.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regsyntax.c.o
 .PHONY : libs/Onigmo/regsyntax.c.o
 
 libs/Onigmo/regsyntax.i: libs/Onigmo/regsyntax.c.i
@@ -455,7 +455,7 @@ libs/Onigmo/regsyntax.i: libs/Onigmo/regsyntax.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regsyntax.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regsyntax.c.i
 .PHONY : libs/Onigmo/regsyntax.c.i
 
 libs/Onigmo/regsyntax.s: libs/Onigmo/regsyntax.c.s
@@ -463,7 +463,7 @@ libs/Onigmo/regsyntax.s: libs/Onigmo/regsyntax.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regsyntax.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regsyntax.c.s
 .PHONY : libs/Onigmo/regsyntax.c.s
 
 libs/Onigmo/regtrav.o: libs/Onigmo/regtrav.c.o
@@ -471,7 +471,7 @@ libs/Onigmo/regtrav.o: libs/Onigmo/regtrav.c.o
 
 # target to build an object file
 libs/Onigmo/regtrav.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regtrav.c.o
 .PHONY : libs/Onigmo/regtrav.c.o
 
 libs/Onigmo/regtrav.i: libs/Onigmo/regtrav.c.i
@@ -479,7 +479,7 @@ libs/Onigmo/regtrav.i: libs/Onigmo/regtrav.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regtrav.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regtrav.c.i
 .PHONY : libs/Onigmo/regtrav.c.i
 
 libs/Onigmo/regtrav.s: libs/Onigmo/regtrav.c.s
@@ -487,7 +487,7 @@ libs/Onigmo/regtrav.s: libs/Onigmo/regtrav.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regtrav.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regtrav.c.s
 .PHONY : libs/Onigmo/regtrav.c.s
 
 libs/Onigmo/regversion.o: libs/Onigmo/regversion.c.o
@@ -495,7 +495,7 @@ libs/Onigmo/regversion.o: libs/Onigmo/regversion.c.o
 
 # target to build an object file
 libs/Onigmo/regversion.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regversion.c.o
 .PHONY : libs/Onigmo/regversion.c.o
 
 libs/Onigmo/regversion.i: libs/Onigmo/regversion.c.i
@@ -503,7 +503,7 @@ libs/Onigmo/regversion.i: libs/Onigmo/regversion.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regversion.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regversion.c.i
 .PHONY : libs/Onigmo/regversion.c.i
 
 libs/Onigmo/regversion.s: libs/Onigmo/regversion.c.s
@@ -511,7 +511,7 @@ libs/Onigmo/regversion.s: libs/Onigmo/regversion.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regversion.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/regversion.c.s
 .PHONY : libs/Onigmo/regversion.c.s
 
 libs/Onigmo/st.o: libs/Onigmo/st.c.o
@@ -519,7 +519,7 @@ libs/Onigmo/st.o: libs/Onigmo/st.c.o
 
 # target to build an object file
 libs/Onigmo/st.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/st.c.o
 .PHONY : libs/Onigmo/st.c.o
 
 libs/Onigmo/st.i: libs/Onigmo/st.c.i
@@ -527,7 +527,7 @@ libs/Onigmo/st.i: libs/Onigmo/st.c.i
 
 # target to preprocess a source file
 libs/Onigmo/st.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/st.c.i
 .PHONY : libs/Onigmo/st.c.i
 
 libs/Onigmo/st.s: libs/Onigmo/st.c.s
@@ -535,7 +535,7 @@ libs/Onigmo/st.s: libs/Onigmo/st.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/st.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/Onigmo/st.c.s
 .PHONY : libs/Onigmo/st.c.s
 
 libs/tiny-textmate/cJSON/cJSON.o: libs/tiny-textmate/cJSON/cJSON.c.o
@@ -543,7 +543,7 @@ libs/tiny-textmate/cJSON/cJSON.o: libs/tiny-textmate/cJSON/cJSON.c.o
 
 # target to build an object file
 libs/tiny-textmate/cJSON/cJSON.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o
 .PHONY : libs/tiny-textmate/cJSON/cJSON.c.o
 
 libs/tiny-textmate/cJSON/cJSON.i: libs/tiny-textmate/cJSON/cJSON.c.i
@@ -551,7 +551,7 @@ libs/tiny-textmate/cJSON/cJSON.i: libs/tiny-textmate/cJSON/cJSON.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/cJSON/cJSON.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.i
 .PHONY : libs/tiny-textmate/cJSON/cJSON.c.i
 
 libs/tiny-textmate/cJSON/cJSON.s: libs/tiny-textmate/cJSON/cJSON.c.s
@@ -559,7 +559,7 @@ libs/tiny-textmate/cJSON/cJSON.s: libs/tiny-textmate/cJSON/cJSON.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/cJSON/cJSON.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.s
 .PHONY : libs/tiny-textmate/cJSON/cJSON.c.s
 
 libs/tiny-textmate/package.o: libs/tiny-textmate/package.c.o
@@ -567,7 +567,7 @@ libs/tiny-textmate/package.o: libs/tiny-textmate/package.c.o
 
 # target to build an object file
 libs/tiny-textmate/package.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/package.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/package.c.o
 .PHONY : libs/tiny-textmate/package.c.o
 
 libs/tiny-textmate/package.i: libs/tiny-textmate/package.c.i
@@ -575,7 +575,7 @@ libs/tiny-textmate/package.i: libs/tiny-textmate/package.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/package.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/package.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/package.c.i
 .PHONY : libs/tiny-textmate/package.c.i
 
 libs/tiny-textmate/package.s: libs/tiny-textmate/package.c.s
@@ -583,7 +583,7 @@ libs/tiny-textmate/package.s: libs/tiny-textmate/package.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/package.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/package.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/package.c.s
 .PHONY : libs/tiny-textmate/package.c.s
 
 libs/tiny-textmate/parser.o: libs/tiny-textmate/parser.c.o
@@ -591,7 +591,7 @@ libs/tiny-textmate/parser.o: libs/tiny-textmate/parser.c.o
 
 # target to build an object file
 libs/tiny-textmate/parser.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/parser.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/parser.c.o
 .PHONY : libs/tiny-textmate/parser.c.o
 
 libs/tiny-textmate/parser.i: libs/tiny-textmate/parser.c.i
@@ -599,7 +599,7 @@ libs/tiny-textmate/parser.i: libs/tiny-textmate/parser.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/parser.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/parser.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/parser.c.i
 .PHONY : libs/tiny-textmate/parser.c.i
 
 libs/tiny-textmate/parser.s: libs/tiny-textmate/parser.c.s
@@ -607,7 +607,7 @@ libs/tiny-textmate/parser.s: libs/tiny-textmate/parser.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/parser.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/parser.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/parser.c.s
 .PHONY : libs/tiny-textmate/parser.c.s
 
 libs/tiny-textmate/processor.o: libs/tiny-textmate/processor.c.o
@@ -615,7 +615,7 @@ libs/tiny-textmate/processor.o: libs/tiny-textmate/processor.c.o
 
 # target to build an object file
 libs/tiny-textmate/processor.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/processor.c.o
 .PHONY : libs/tiny-textmate/processor.c.o
 
 libs/tiny-textmate/processor.i: libs/tiny-textmate/processor.c.i
@@ -623,7 +623,7 @@ libs/tiny-textmate/processor.i: libs/tiny-textmate/processor.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/processor.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/processor.c.i
 .PHONY : libs/tiny-textmate/processor.c.i
 
 libs/tiny-textmate/processor.s: libs/tiny-textmate/processor.c.s
@@ -631,7 +631,7 @@ libs/tiny-textmate/processor.s: libs/tiny-textmate/processor.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/processor.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/processor.c.s
 .PHONY : libs/tiny-textmate/processor.c.s
 
 libs/tiny-textmate/reader_cjson.o: libs/tiny-textmate/reader_cjson.c.o
@@ -639,7 +639,7 @@ libs/tiny-textmate/reader_cjson.o: libs/tiny-textmate/reader_cjson.c.o
 
 # target to build an object file
 libs/tiny-textmate/reader_cjson.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/reader_cjson.c.o
 .PHONY : libs/tiny-textmate/reader_cjson.c.o
 
 libs/tiny-textmate/reader_cjson.i: libs/tiny-textmate/reader_cjson.c.i
@@ -647,7 +647,7 @@ libs/tiny-textmate/reader_cjson.i: libs/tiny-textmate/reader_cjson.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/reader_cjson.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/reader_cjson.c.i
 .PHONY : libs/tiny-textmate/reader_cjson.c.i
 
 libs/tiny-textmate/reader_cjson.s: libs/tiny-textmate/reader_cjson.c.s
@@ -655,7 +655,7 @@ libs/tiny-textmate/reader_cjson.s: libs/tiny-textmate/reader_cjson.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/reader_cjson.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/reader_cjson.c.s
 .PHONY : libs/tiny-textmate/reader_cjson.c.s
 
 libs/tiny-textmate/textmate.o: libs/tiny-textmate/textmate.c.o
@@ -663,7 +663,7 @@ libs/tiny-textmate/textmate.o: libs/tiny-textmate/textmate.c.o
 
 # target to build an object file
 libs/tiny-textmate/textmate.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/textmate.c.o
 .PHONY : libs/tiny-textmate/textmate.c.o
 
 libs/tiny-textmate/textmate.i: libs/tiny-textmate/textmate.c.i
@@ -671,7 +671,7 @@ libs/tiny-textmate/textmate.i: libs/tiny-textmate/textmate.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/textmate.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/textmate.c.i
 .PHONY : libs/tiny-textmate/textmate.c.i
 
 libs/tiny-textmate/textmate.s: libs/tiny-textmate/textmate.c.s
@@ -679,7 +679,7 @@ libs/tiny-textmate/textmate.s: libs/tiny-textmate/textmate.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/textmate.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/textmate.c.s
 .PHONY : libs/tiny-textmate/textmate.c.s
 
 libs/tiny-textmate/theme.o: libs/tiny-textmate/theme.c.o
@@ -687,7 +687,7 @@ libs/tiny-textmate/theme.o: libs/tiny-textmate/theme.c.o
 
 # target to build an object file
 libs/tiny-textmate/theme.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/theme.c.o
 .PHONY : libs/tiny-textmate/theme.c.o
 
 libs/tiny-textmate/theme.i: libs/tiny-textmate/theme.c.i
@@ -695,7 +695,7 @@ libs/tiny-textmate/theme.i: libs/tiny-textmate/theme.c.i
 
 # target to preprocess a source file
 libs/tiny-textmate/theme.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/theme.c.i
 .PHONY : libs/tiny-textmate/theme.c.i
 
 libs/tiny-textmate/theme.s: libs/tiny-textmate/theme.c.s
@@ -703,7 +703,7 @@ libs/tiny-textmate/theme.s: libs/tiny-textmate/theme.c.s
 
 # target to generate assembly for a file
 libs/tiny-textmate/theme.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/c_lib.dir/build.make lib/CMakeFiles/c_lib.dir/libs/tiny-textmate/theme.c.s
 .PHONY : libs/tiny-textmate/theme.c.s
 
 # Help Target
@@ -714,7 +714,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cpp_lib"
+	@echo "... c_lib"
 	@echo "... lib.o"
 	@echo "... lib.i"
 	@echo "... lib.s"

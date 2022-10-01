@@ -58,8 +58,7 @@ async function run_main() {
   // load a theme
   {
     // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
-    // const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/dracula.json');
+    const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
     const text = await response.text();
     Module.loadTheme(text);
   }
@@ -70,9 +69,8 @@ async function run_main() {
 
   // load grammar
   {
-    // const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
+    const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
     // const response = await fetch('extensions/javascript/syntaxes/JavaScript.tmLanguage.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/c.json');
     const text = await response.text();
     Module.loadGrammar(text);
   }
@@ -112,7 +110,7 @@ loadGrammar: (function(data) {
   _load_language_buffer();
 }),
 themeForeground: (function() {
-  var clr = 0; // _get_theme_foreground();
+  var clr = _get_theme_foreground();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -120,7 +118,7 @@ themeForeground: (function() {
   return res;
 }),
 themeBackground: (function() {
-  var clr = 0; // _get_theme_background();
+  var clr = _get_theme_background();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -132,11 +130,11 @@ highlight: (function(str, begin) {
   var spans = _highlight_buffer(begin);
   var res = [];
   for(var i=0; i<spans; i++) {
-    var span = 0; // _get_style_span(i);
+    var span = _get_style_span(i);
     var start = span & 0xff;
     var length = (span >> 8) & 0xff;
 
-    var color = 0; // _get_style_color(i);
+    var color = _get_style_color(i);
     var r = color & 0xff;
     var g = (color >> 8) & 0xff;
     var b = (color >> 16) & 0xff;
@@ -158,7 +156,7 @@ print: (function(str) {
   // var line = document.createElement('div');
   // line.innerHTML = str;
   // target.appendChild(line);
-  console.log(str);
+  // console.log(str);
 }),
 setStatus: (function(text) {}),
 totalDependencies: 0,
