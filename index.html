@@ -1,0 +1,167 @@
+<html>
+<body>
+<style>
+.code {
+  font-size: 14pt;
+  padding: 20px;
+}
+.code i {
+  font-style: normal;
+}
+.code div {
+  display: block;
+}
+</style>
+<script>
+function append_styled_line(styled, target) {
+  var line = document.createElement('div');
+
+  styled.spans.forEach((s) => {
+    var span = document.createElement('i');
+    span.innerHTML = styled.text.substr(s.start, s.length).replaceAll(' ', '&nbsp;')
+              .replace('<', '&lt;')
+              .replace('>', '&gt;');
+
+    var style = `color: rgb(${s.r},${s.g},${s.b})`;
+    span.setAttribute('style', style);
+
+    line.appendChild(span);
+  });
+
+  target.appendChild(line);
+}
+
+function run_hl(lines, target, onDone) {
+  var idx = 0.
+  while(lines.length > 0) {
+    var line = lines.shift();
+    var styled = {
+      text: line,
+      spans: Module.highlight(line, false)
+    };
+    append_styled_line(styled, target);
+    idx++;
+    if (idx > 100) break;
+  }
+  if (lines.length > 0) {
+    setTimeout(() => { run_hl(lines, target, onDone); }, 0);
+  } else {
+    onDone();
+  }
+}
+
+async function run_main() {
+
+  var startTime = performance.now();
+  var target = document.getElementById('output');
+
+  // load a theme
+  {
+    // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
+    // const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
+    // const text = await response.text();
+    // Module.loadTheme(text);
+  }
+
+  var fg = Module.themeForeground();
+  var bg = Module.themeBackground();
+  target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
+
+  // load grammar
+  {
+    // const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
+    // const response = await fetch('extensions/javascript/syntaxes/JavaScript.tmLanguage.json');
+    // const text = await response.text();
+    // Module.loadGrammar(text);
+  }
+
+  // load code
+  {
+    const response = await fetch('lib/libs/tiny-textmate/samples/cpp_test.cpp');
+    // const response = await fetch('tests/tinywl.c');
+    // const response = await fetch('tests/jquery-2.2.4.js');
+    const text = await response.text();
+    const lines = text.split('\n');
+    Module.highlight("", true);
+    run_hl(lines, target, () => {
+      endTime = performance.now();
+      console.log(`done in ${endTime - startTime} milliseconds`);
+    });
+  }
+}
+
+var Module = {
+preRun: [],
+postRun: [
+  run_main
+],
+pushString: (function(str) {
+  _begin_string();
+  for(i=0;i<str.length;i++) {
+    _push_character(str.charCodeAt(i));
+  }
+}),
+loadTheme: (function(data) {
+  Module.pushString(data);
+  // _load_theme_buffer();
+}),
+loadGrammar: (function(data) {
+  Module.pushString(data);
+  // _load_language_buffer();
+}),
+themeForeground: (function() {
+  var clr = 0; // _get_theme_foreground();
+  var res = {};
+  res.r = clr & 0xff;
+  res.g = (clr >> 8) & 0xff;
+  res.b = (clr >> 16) & 0xff;
+  return res;
+}),
+themeBackground: (function() {
+  var clr = 0; // _get_theme_background();
+  var res = {};
+  res.r = clr & 0xff;
+  res.g = (clr >> 8) & 0xff;
+  res.b = (clr >> 16) & 0xff;
+  return res;
+}),
+highlight: (function(str, begin) {
+  this.pushString(str);
+  var spans = _highlight_buffer(begin);
+  var res = [];
+  for(var i=0; i<spans; i++) {
+    var span = 0; // _get_style_span(i);
+    var start = span & 0xff;
+    var length = (span >> 8) & 0xff;
+
+    var color = 0; // _get_style_color(i);
+    var r = color & 0xff;
+    var g = (color >> 8) & 0xff;
+    var b = (color >> 16) & 0xff;
+    var italic = ((color >> 24) & 0xff) > 0;
+
+    res.push({
+      start: start,
+      length: length,
+      r: r,
+      g: g,
+      b: b,
+      italic: italic
+    });
+  }
+  return res;
+}),
+print: (function(str) {
+  console.log(str);
+}),
+setStatus: (function(text) {}),
+totalDependencies: 0,
+monitorRunDependencies: (function(left) {})
+};
+</script>
+<script async type="text/javascript" src="syntax_highlight.js"></script>
+
+<div id="output" class="code"></div>
+
+</body>
+</html>

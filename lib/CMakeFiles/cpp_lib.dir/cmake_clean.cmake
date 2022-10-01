@@ -43,6 +43,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.o.d"
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o"
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o.d"
+  "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o"
+  "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o.d"
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.o"
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.o.d"
   "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.o"

@@ -22,7 +22,10 @@ lib/CMakeFiles/cpp_lib.dir/lib.cpp.o: lib/lib.cpp \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/string.h \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
-  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdio.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 
 lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.o: lib/libs/Onigmo/enc/ascii.c \
   lib/libs/Onigmo/regenc.h \
@@ -540,6 +543,8 @@ lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o: lib/libs/tiny-te
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h
 
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o: lib/libs/tiny-textmate/resource.c
+
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.o: lib/libs/tiny-textmate/textmate.c \
   lib/libs/tiny-textmate/textmate.h \
   lib/libs/Onigmo/onigmognu.h \
@@ -583,6 +588,8 @@ lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.o: lib/libs/tiny-textmate/
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
 
 
+lib/libs/tiny-textmate/resource.c:
+
 lib/libs/tiny-textmate/reader_cjson.c:
 
 lib/libs/tiny-textmate/processor.c:
@@ -607,13 +614,9 @@ lib/libs/tiny-textmate/cJSON/cJSON.h:
 
 lib/libs/Onigmo/st.c:
 
+lib/libs/Onigmo/regversion.c:
+
 lib/libs/Onigmo/enc/unicode.c:
-
-/home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/float.h:
-
-lib/libs/Onigmo/onigmo.h:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/dirent.h:
 
@@ -623,8 +626,6 @@ lib/libs/Onigmo/regenc.h:
 
 lib/libs/Onigmo/reggnu.c:
 
-lib/libs/Onigmo/enc/ascii.c:
-
 lib/libs/Onigmo/onigmognu.h:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/float.h:
@@ -633,13 +634,15 @@ lib/libs/Onigmo/onigmognu.h:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
 
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h:
+
+lib/libs/Onigmo/regerror.c:
+
+lib/libs/Onigmo/regext.c:
+
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdarg.h:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
 
 lib/lib.cpp:
 
@@ -659,9 +662,23 @@ lib/libs/Onigmo/regposerr.c:
 
 lib/libs/tiny-textmate/textmate.h:
 
-lib/libs/Onigmo/enc/utf_8.c:
+/home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/float.h:
 
-/home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/stdarg.h:
+lib/libs/Onigmo/onigmo.h:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdarg.h:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:
+
+lib/libs/Onigmo/enc/ascii.c:
+
+/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdio.h:
+
+lib/libs/Onigmo/enc/utf_8.c:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdbool.h:
 
@@ -670,6 +687,8 @@ lib/libs/Onigmo/enc/utf_8.c:
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
 
 /home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/stdbool.h:
+
+/home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/stdarg.h:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
 
@@ -684,8 +703,6 @@ lib/libs/tiny-textmate/textmate.c:
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
 
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
-
-lib/libs/Onigmo/regversion.c:
 
 /home/iceman/Developer/emsdk/upstream/lib/clang/15.0.0/include/inttypes.h:
 
@@ -714,14 +731,6 @@ lib/libs/Onigmo/regcomp.c:
 /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stddef.h:
 
 lib/libs/Onigmo/regparse.h:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h:
-
-lib/libs/Onigmo/regerror.c:
-
-/home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
-
-lib/libs/Onigmo/regext.c:
 
 lib/libs/tiny-textmate/cJSON/cJSON.c:
 

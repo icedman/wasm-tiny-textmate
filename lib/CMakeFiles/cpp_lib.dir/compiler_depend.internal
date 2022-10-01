@@ -24,6 +24,9 @@ lib/CMakeFiles/cpp_lib.dir/lib.cpp.o
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/string.h
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/features.h
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdio.h
+ /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
+ /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 
 lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.o
  /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/Onigmo/enc/ascii.c
@@ -561,6 +564,9 @@ lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/endian.h
  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h
+
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o
+ /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/resource.c
 
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/textmate.c.o
  /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/textmate.c

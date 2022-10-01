@@ -20,4 +20,7 @@ lib/CMakeFiles/cpp_lib.dir/lib.cpp.o: \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/string.h \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
   /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
-  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/stdio.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/iceman/Developer/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h

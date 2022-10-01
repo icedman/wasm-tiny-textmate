@@ -414,11 +414,26 @@ lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.s"
 	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && /home/iceman/Developer/emsdk/upstream/emscripten/emcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/theme.c -o CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.s
 
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o: lib/CMakeFiles/cpp_lib.dir/flags.make
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o: lib/CMakeFiles/cpp_lib.dir/includes_C.rsp
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o: lib/libs/tiny-textmate/resource.c
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o: lib/CMakeFiles/cpp_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o"
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && /home/iceman/Developer/emsdk/upstream/emscripten/emcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o -MF CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o.d -o CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o -c /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/resource.c
+
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.i"
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && /home/iceman/Developer/emsdk/upstream/emscripten/emcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/resource.c > CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.i
+
+lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.s"
+	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && /home/iceman/Developer/emsdk/upstream/emscripten/emcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/resource.c -o CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.s
+
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o: lib/CMakeFiles/cpp_lib.dir/flags.make
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o: lib/CMakeFiles/cpp_lib.dir/includes_C.rsp
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o: lib/libs/tiny-textmate/cJSON/cJSON.c
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o: lib/CMakeFiles/cpp_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o"
 	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && /home/iceman/Developer/emsdk/upstream/emscripten/emcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o -MF CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o.d -o CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o -c /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib/libs/tiny-textmate/cJSON/cJSON.c
 
 lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.i: cmake_force
@@ -454,6 +469,7 @@ cpp_lib_OBJECTS = \
 "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.o" \
 "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o" \
 "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.o" \
+"CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o" \
 "CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o"
 
 # External object files for target cpp_lib
@@ -482,10 +498,11 @@ lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/parser.c.o
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/processor.c.o
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.o
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/theme.c.o
+lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/cJSON/cJSON.c.o
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/build.make
 lib/libcpp_lib.a: lib/CMakeFiles/cpp_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX static library libcpp_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX static library libcpp_lib.a"
 	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && $(CMAKE_COMMAND) -P CMakeFiles/cpp_lib.dir/cmake_clean_target.cmake
 	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp_lib.dir/link.txt --verbose=$(VERBOSE)
 
