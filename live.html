@@ -1,8 +1,11 @@
 <html>
 <body>
 <style>
+* {
+  font-size:  14pt;
+}
 .code {
-  font-size: 14pt;
+  font-size: 16pt;
   padding: 20px;
 }
 .code i {
@@ -12,7 +15,16 @@
   display: block;
 }
 </style>
+<style id="css">
+</style>
 <script>
+var css = {};
+
+function _style_color(s) {
+  // return `color: rgb(${s.r},${s.g},${s.b})`;
+  return `color: #${s.r.toString(16)}${s.g.toString(16)}${s.b.toString(16)}`;
+}
+
 function append_styled_line(styled, target) {
   var line = document.createElement('div');
 
@@ -22,7 +34,11 @@ function append_styled_line(styled, target) {
               .replace('<', '&lt;')
               .replace('>', '&gt;');
 
-    var style = `color: rgb(${s.r},${s.g},${s.b})`;
+    var style = _style_color(s);
+    if (s.italic) {
+      style += '; font-style: italic';
+    }
+
     span.setAttribute('style', style);
 
     line.appendChild(span);
@@ -50,39 +66,46 @@ function run_hl(lines, target, onDone) {
   }
 }
 
-async function run_main() {
-
-  var startTime = performance.now();
-  var target = document.getElementById('output');
-
+async function reload_theme() {
   // load a theme
   {
+    var select = document.getElementById('theme');
     // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
-    // const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/dracula.json');
+    const response = await fetch(select.value);
     const text = await response.text();
     Module.loadTheme(text);
+
+    var fg = Module.themeForeground();
+    var bg = Module.themeBackground();
+
+    var target = document.getElementById('output');
+    target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
   }
+}
 
-  var fg = Module.themeForeground();
-  var bg = Module.themeBackground();
-  target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
-
+async function reload_grammar() {
   // load grammar
   {
+    var select = document.getElementById('language');
     // const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
-    // const response = await fetch('extensions/javascript/syntaxes/JavaScript.tmLanguage.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/c.json');
+    const response = await fetch(select.value);
     const text = await response.text();
     Module.loadGrammar(text);
   }
+}
+
+async function run_update() {
+  var startTime = performance.now();
 
   // load code
+  var target = document.getElementById('output');
+  target.innerHTML = '';
+  
   {
-    const response = await fetch('lib/libs/tiny-textmate/tests/data/tinywl.c');
+    // const response = await fetch('tests/keys_test.cpp');
     // const response = await fetch('tests/tinywl.c');
-    // const response = await fetch('tests/jquery-2.2.4.js');
-    const text = await response.text();
+    // const text = await response.text();
+    const text = document.getElementById('source').value;
     const lines = text.split('\n');
     Module.highlight("", true);
     run_hl(lines, target, () => {
@@ -92,10 +115,19 @@ async function run_main() {
   }
 }
 
+function reload_script() {
+}
+
+async function first_run() {
+  await reload_theme();
+  await reload_grammar();
+  run_update();
+}
+
 var Module = {
 preRun: [],
 postRun: [
-  run_main
+  first_run
 ],
 pushString: (function(str) {
   _begin_string();
@@ -112,7 +144,7 @@ loadGrammar: (function(data) {
   _load_language_buffer();
 }),
 themeForeground: (function() {
-  var clr = 0; // _get_theme_foreground();
+  var clr = _get_theme_foreground();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -120,7 +152,7 @@ themeForeground: (function() {
   return res;
 }),
 themeBackground: (function() {
-  var clr = 0; // _get_theme_background();
+  var clr = _get_theme_background();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -132,11 +164,11 @@ highlight: (function(str, begin) {
   var spans = _highlight_buffer(begin);
   var res = [];
   for(var i=0; i<spans; i++) {
-    var span = 0; // _get_style_span(i);
+    var span = _get_style_span(i);
     var start = span & 0xff;
     var length = (span >> 8) & 0xff;
 
-    var color = 0; // _get_style_color(i);
+    var color = _get_style_color(i);
     var r = color & 0xff;
     var g = (color >> 8) & 0xff;
     var b = (color >> 16) & 0xff;
@@ -154,10 +186,6 @@ highlight: (function(str, begin) {
   return res;
 }),
 print: (function(str) {
-  // var target = document.getElementById('output');
-  // var line = document.createElement('div');
-  // line.innerHTML = str;
-  // target.appendChild(line);
   console.log(str);
 }),
 setStatus: (function(text) {}),
@@ -165,8 +193,28 @@ totalDependencies: 0,
 monitorRunDependencies: (function(left) {})
 };
 </script>
-<script async type="text/javascript" src="syntax_highlight.js"></script>
 
+<div id="head">
+<script async type="text/javascript" src="syntax_highlight.js"></script>
+</div>
+
+<button onclick="reload_script()">Reload</button>
+<select id="theme" onchange="(async function() { await reload_theme(); run_update(); })()">
+  <option selected value="extensions/theme-monokai/themes/monokai-color-theme.json">Monokai</option>
+  <option value="extensions/theme-kimbie-dark/themes/kimbie-dark-color-theme.json">Kimbie Dark</option>
+  <option value="extensions/uloco.theme-bluloco-dark-3.1.1/themes/bluloco-dark-italic-color-theme.json">Bluloco</option>
+  <option value="extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json">Dracula</option>
+</select>
+<select id="language" onchange="(async function() { await reload_grammar(); run_update();})()">
+  <option selected value="extensions/cpp/syntaxes/c.tmLanguage.json">c</option>
+  <option value="extensions/cpp/syntaxes/cpp.tmLanguage.json">c++</option>
+  <option value="extensions/javascript/syntaxes/JavaScript.tmLanguage.json">js</option>
+</select>
+<hr/>
+<textarea id="source" rows="10" cols="80" oninput="run_update()">int main(int argc, char **argv) {
+  printf("hello world\n");
+}</textarea>
+<hr/>
 <div id="output" class="code"></div>
 
 </body>

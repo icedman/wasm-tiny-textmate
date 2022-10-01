@@ -68,7 +68,7 @@ add_library(cpp_lib ${CPP_LIBRARY_TYPE} lib.cpp
     ./libs/tiny-textmate/processor.c
     ./libs/tiny-textmate/reader_cjson.c
     ./libs/tiny-textmate/theme.c
-    ./libs/tiny-textmate/resource.c
+    # ./libs/tiny-textmate/resource.c
     ./libs/tiny-textmate/cJSON/cJSON.c
 )
 

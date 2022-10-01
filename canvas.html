@@ -14,21 +14,31 @@
 </style>
 <script>
 function append_styled_line(styled, target) {
-  var line = document.createElement('div');
+  target.style.width = target.width;
+  target.style.height = target.height;
+
+  var textHeight = 20;
+
+  var offsetX = 0;
+  var offsetY = target._lastY || textHeight;
+  var ctx = target.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
 
   styled.spans.forEach((s) => {
-    var span = document.createElement('i');
-    span.innerHTML = styled.text.substr(s.start, s.length).replaceAll(' ', '&nbsp;')
-              .replace('<', '&lt;')
-              .replace('>', '&gt;');
+    const text = styled.text.substr(s.start, s.length);
 
-    var style = `color: rgb(${s.r},${s.g},${s.b})`;
-    span.setAttribute('style', style);
+    var i = s.italic ? 'italic' : '';
+    ctx.font = `${i} ${textHeight}px serif`;
 
-    line.appendChild(span);
+    ctx.fillStyle = `rgb(${s.r},${s.g},${s.b})`;
+    ctx.fillText(text, offsetX, offsetY);
+
+    const extents = ctx.measureText(text);
+    offsetX += extents.width;
   });
 
-  target.appendChild(line);
+  offsetY += textHeight;
+  target._lastY = offsetY;
 }
 
 function run_hl(lines, target, onDone) {
@@ -54,40 +64,50 @@ async function run_main() {
 
   var startTime = performance.now();
   var target = document.getElementById('output');
+  var targetImg = document.getElementById('output-png');
 
   // load a theme
   {
     // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
-    // const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/dracula.json');
+    const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
     const text = await response.text();
     Module.loadTheme(text);
   }
 
-  var fg = Module.themeForeground();
-  var bg = Module.themeBackground();
-  target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
-
   // load grammar
   {
     // const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
+    const response = await fetch('extensions/cpp/syntaxes/cpp.tmLanguage.json');
     // const response = await fetch('extensions/javascript/syntaxes/JavaScript.tmLanguage.json');
-    const response = await fetch('lib/libs/tiny-textmate/samples/c.json');
     const text = await response.text();
     Module.loadGrammar(text);
   }
 
   // load code
   {
-    const response = await fetch('lib/libs/tiny-textmate/tests/data/tinywl.c');
+    const response = await fetch('tests/keys_test.cpp');
     // const response = await fetch('tests/tinywl.c');
     // const response = await fetch('tests/jquery-2.2.4.js');
     const text = await response.text();
     const lines = text.split('\n');
     Module.highlight("", true);
+
+  var fg = Module.themeForeground();
+  var bg = Module.themeBackground();
+  // target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
+
+  var height = 20 * lines.length;
+  var ctx = target.getContext('2d');
+  target.height = height;
+  ctx.fillStyle = `rgb(${bg.r},${bg.g},${bg.b})`;
+  ctx.fillRect(0,0,800,height);
+  // targetImg.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
+
     run_hl(lines, target, () => {
       endTime = performance.now();
+      console.log(target._lastY);
       console.log(`done in ${endTime - startTime} milliseconds`);
+      document.getElementById('output-png').src = document.getElementById('output').toDataURL();
     });
   }
 }
@@ -112,7 +132,7 @@ loadGrammar: (function(data) {
   _load_language_buffer();
 }),
 themeForeground: (function() {
-  var clr = 0; // _get_theme_foreground();
+  var clr = _get_theme_foreground();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -120,7 +140,7 @@ themeForeground: (function() {
   return res;
 }),
 themeBackground: (function() {
-  var clr = 0; // _get_theme_background();
+  var clr = _get_theme_background();
   var res = {};
   res.r = clr & 0xff;
   res.g = (clr >> 8) & 0xff;
@@ -132,11 +152,11 @@ highlight: (function(str, begin) {
   var spans = _highlight_buffer(begin);
   var res = [];
   for(var i=0; i<spans; i++) {
-    var span = 0; // _get_style_span(i);
+    var span = _get_style_span(i);
     var start = span & 0xff;
     var length = (span >> 8) & 0xff;
 
-    var color = 0; // _get_style_color(i);
+    var color = _get_style_color(i);
     var r = color & 0xff;
     var g = (color >> 8) & 0xff;
     var b = (color >> 16) & 0xff;
@@ -154,10 +174,6 @@ highlight: (function(str, begin) {
   return res;
 }),
 print: (function(str) {
-  // var target = document.getElementById('output');
-  // var line = document.createElement('div');
-  // line.innerHTML = str;
-  // target.appendChild(line);
   console.log(str);
 }),
 setStatus: (function(text) {}),
@@ -167,7 +183,7 @@ monitorRunDependencies: (function(left) {})
 </script>
 <script async type="text/javascript" src="syntax_highlight.js"></script>
 
-<div id="output" class="code"></div>
-
+<canvas id="output" class="code" width="800" height="600" style="display:none"></canvas>
+<img id="output-png" src=""/>
 </body>
 </html>

@@ -658,30 +658,6 @@ libs/tiny-textmate/reader_cjson.c.s:
 	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/reader_cjson.c.s
 .PHONY : libs/tiny-textmate/reader_cjson.c.s
 
-libs/tiny-textmate/resource.o: libs/tiny-textmate/resource.c.o
-.PHONY : libs/tiny-textmate/resource.o
-
-# target to build an object file
-libs/tiny-textmate/resource.c.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.o
-.PHONY : libs/tiny-textmate/resource.c.o
-
-libs/tiny-textmate/resource.i: libs/tiny-textmate/resource.c.i
-.PHONY : libs/tiny-textmate/resource.i
-
-# target to preprocess a source file
-libs/tiny-textmate/resource.c.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.i
-.PHONY : libs/tiny-textmate/resource.c.i
-
-libs/tiny-textmate/resource.s: libs/tiny-textmate/resource.c.s
-.PHONY : libs/tiny-textmate/resource.s
-
-# target to generate assembly for a file
-libs/tiny-textmate/resource.c.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-tiny-textmate && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tiny-textmate/resource.c.s
-.PHONY : libs/tiny-textmate/resource.c.s
-
 libs/tiny-textmate/textmate.o: libs/tiny-textmate/textmate.c.o
 .PHONY : libs/tiny-textmate/textmate.o
 
@@ -805,9 +781,6 @@ help:
 	@echo "... libs/tiny-textmate/reader_cjson.o"
 	@echo "... libs/tiny-textmate/reader_cjson.i"
 	@echo "... libs/tiny-textmate/reader_cjson.s"
-	@echo "... libs/tiny-textmate/resource.o"
-	@echo "... libs/tiny-textmate/resource.i"
-	@echo "... libs/tiny-textmate/resource.s"
 	@echo "... libs/tiny-textmate/textmate.o"
 	@echo "... libs/tiny-textmate/textmate.i"
 	@echo "... libs/tiny-textmate/textmate.s"
