@@ -18,9 +18,11 @@ function append_styled_line(styled, target) {
 
   styled.spans.forEach((s) => {
     var span = document.createElement('i');
-    span.innerHTML = styled.text.substr(s.start, s.length).replaceAll(' ', '&nbsp;')
-              .replace('<', '&lt;')
-              .replace('>', '&gt;');
+    span.innerHTML = styled.text.substr(s.start, s.length)
+          .replaceAll(' ', '&nbsp;')
+          .replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;');
 
     var style = `color: rgb(${s.r},${s.g},${s.b})`;
     span.setAttribute('style', style);

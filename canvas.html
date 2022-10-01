@@ -25,7 +25,8 @@ function append_styled_line(styled, target) {
   ctx.imageSmoothingEnabled = false;
 
   styled.spans.forEach((s) => {
-    const text = styled.text.substr(s.start, s.length);
+    const text = styled.text.substr(s.start, s.length)
+          .replaceAll('\t', '    ')
 
     var i = s.italic ? 'italic' : '';
     ctx.font = `${i} ${textHeight}px serif`;

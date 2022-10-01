@@ -30,6 +30,7 @@ EXPORT int highlight_buffer(bool start)
   if (start) {
     tx_init_parser_state(&stack, txn_syntax_value(syntax));
   }
+  string_buffer[string_buffer_idx] = '\n';
   tx_parse_line((char_u*)string_buffer, (char_u*)string_buffer + string_buffer_idx + 1, &stack, &processor);
   begin_string();
   // printf("\n");
@@ -101,6 +102,13 @@ EXPORT int get_theme_foreground()
 
   int rgb[] = {250, 250, 250};
 
+  TxStyleSpan s;
+  if (tx_style_from_scope("foreground", theme, &s)) {
+    txt_color_to_rgb(s.fg, rgb);
+  } else if (tx_style_from_scope("editor.foreground", theme, &s)) {
+    txt_color_to_rgb(s.fg, rgb);
+  }
+
   // rgb
   res |= (rgb[0]);
   res |= (rgb[1] << 8);
@@ -115,6 +123,13 @@ EXPORT int get_theme_background()
   int res = 0;
 
   int rgb[] = {50, 50, 50};
+
+  TxStyleSpan s;
+  if (tx_style_from_scope("background", theme, &s)) {
+    txt_color_to_rgb(s.fg, rgb);
+  } else if (tx_style_from_scope("editor.background", theme, &s)) {
+    txt_color_to_rgb(s.fg, rgb);
+  }
 
   // rgb
   res |= (rgb[0]);
