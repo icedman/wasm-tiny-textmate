@@ -1,0 +1,3 @@
+[submodule "lib/libs/tiny-textmate"]
+	path = lib/libs/tiny-textmate
+	url = https://github.com/icedman/tiny-textmate
