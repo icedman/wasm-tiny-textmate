@@ -50,6 +50,10 @@ EXPORT int load_language_buffer()
   syntax = txn_load_syntax_data((char_u*)string_buffer);
   tx_init_parser_state(&stack, txn_syntax_value(syntax));
   begin_string();
+
+  TxNode *scope = txn_get(syntax, "scopeName");
+  txn_set(tx_global_repository(),
+        scope ? scope->string_value : "source.xxx", syntax);
   return 0;
 }
 
@@ -83,13 +87,13 @@ EXPORT int get_style_color(int index)
   TxStyleSpan s = processor.line_styles[index];
 
   int rgb[] = {250, 250, 250};
-  txt_color_to_rgb(s.fg, rgb);
+  txt_color_to_rgb(s.font_style.fg, rgb);
 
   // rgb
   res |= (rgb[0]);
   res |= (rgb[1] << 8);
   res |= (rgb[2] << 16);
-  res |= ((s.italic ? 1 : 0) << 24);
+  res |= ((s.font_style.italic ? 1 : 0) << 24);
 
   // printf("%d-%d rgb(%d, %d, %d)\n", s.start, s.length, s.r, s.g, s.b);
   return res;
@@ -104,9 +108,9 @@ EXPORT int get_theme_foreground()
 
   TxStyleSpan s;
   if (tx_style_from_scope("foreground", theme, &s)) {
-    txt_color_to_rgb(s.fg, rgb);
+    txt_color_to_rgb(s.font_style.fg, rgb);
   } else if (tx_style_from_scope("editor.foreground", theme, &s)) {
-    txt_color_to_rgb(s.fg, rgb);
+    txt_color_to_rgb(s.font_style.fg, rgb);
   }
 
   // rgb
@@ -126,9 +130,9 @@ EXPORT int get_theme_background()
 
   TxStyleSpan s;
   if (tx_style_from_scope("background", theme, &s)) {
-    txt_color_to_rgb(s.fg, rgb);
+    txt_color_to_rgb(s.font_style.fg, rgb);
   } else if (tx_style_from_scope("editor.background", theme, &s)) {
-    txt_color_to_rgb(s.fg, rgb);
+    txt_color_to_rgb(s.font_style.fg, rgb);
   }
 
   // rgb
